@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: monospace;
+}
+body {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 70vh;
+	background-color: #fff ;
+}
+h3{
+	position: relative;
+	font-size: 7vw;
+	color: white;
+	letter-spacing: 3px;
+}
+h3::before
+{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	color: blue;
+	border-right: 2px solid black;
+	overflow: hidden;
+	animation: animate 6s linear infinite;
+
+}
+@keyframes animate
+{
+	0%, 10%, 100ù
+{
+	width: 0;
+}
+70%, 90%
+{
+	width: 100%;
+}
+}
